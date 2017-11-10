@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chart</title>
+</head>
+<body ng-app="myApp">
+	
+	<div ng-controller="MyController">
+	    <div fusioncharts
+	       width="600"
+	       height="500"
+	       type="column2d"
+	       dataSource="{{myDataSource}}" >
+	    </div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script type="text/javascript" src="chart-plugins/fusioncharts.js"></script>
+	<script type="text/javascript" src="chart-plugins/fusioncharts.charts.js"></script>
+	<script type="text/javascript" src="chart-plugins/angular-fusioncharts.min.js"></script>
+	
+	<script>
+		var app = angular.module("myApp", ["ng-fusioncharts"]);
+
+		app.controller('MyController', function ($scope) {
+              $scope.myDataSource = {
+                chart: {
+                    caption: "Harry's SuperMart",
+                    subCaption: "Top 5 stores in last month by revenue",
+                },
+                data:[{
+                    label: "Bakersfield Central",
+                    value: "8800"
+                },
+                {
+                    label: "Garden Groove harbour",
+                    value: "730000"
+                },
+                {
+                    label: "Los Angeles Topanga",
+                    value: "590000"
+                },
+                {
+                    label: "Compton-Rancho Dom",
+                    value: "520000"
+                },
+                {
+                    label: "Daly City Serramonte",
+                    value: "330000"
+                }]
+              };
+            });
+	</script>
+
+</body>
+</html>

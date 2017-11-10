@@ -1,0 +1,10 @@
+> first you cloned develop,
+> created a new branch out of it
+> made changes to that new branch
+> you dint commit those changes int he new branch
+> now you want to see the old branch (develop) and run it
+> when you switched branches, it gave you the 
+	Ex: you are in new-branch, now you
+		git checkout develop
+		now in the develop branch you aslo have the changes made in your new-branch, this is because 
+		REFER 

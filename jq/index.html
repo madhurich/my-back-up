@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="node_modules/systemjs/dist/system.js">
+            
+        </script>
+    </head>
+    <body>
+        <div id="app">Change with jQuery</div>
+    <script src="script.js">
+    
+    
+    //set our baseURL reference Path
+    SystemJS.config({
+        map:{
+            "jQuery": "node_modules/jQuery/tmp/jquery.js"
+        },
+        baseURL: "/",
+        defaultJSExtensions: true
+    });
+    SystemJS.import('script.js');
+    </script>
+    </body>
+</html>

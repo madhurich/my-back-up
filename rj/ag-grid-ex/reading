@@ -1,0 +1,15 @@
+REFER https://plnkr.co/edit/0k4sYa?p=info
+REFER https://stackoverflow.com/questions/35311052/how-to-upgrade-refresh-the-ag-grid-after-row-delete
+you used npm install ag-grid and included the script, but it dint 
+work.
+Then you included the cdns from the plunker and it worked, but with header names at the same place
+
+
+angular cdn for 1.5
+https://docs.angularjs.org/misc/downloading 
+
+REFER 
+https://www.ag-grid.com/javascript-grid-header-rendering/#gsc.tab=0
+https://www.ag-grid.com/javascript-grid-floating/#gsc.tab=0
+https://www.ag-grid.com/javascript-grid-api/?framework=all#gsc.tab=0
+https://www.ag-grid.com/ag-grid-tutorials/index.php#gsc.tab=0

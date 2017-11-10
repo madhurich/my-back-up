@@ -1,0 +1,1 @@
+export let people = ['mad', 'man', 'dad', 'mom'];

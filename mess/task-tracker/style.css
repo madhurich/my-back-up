@@ -1,0 +1,61 @@
+.tbl1{
+	width: 44%;
+	padding: 20px;
+}
+#t2{
+	width: 320px;
+}
+input[type="text"], input[type="date"]{
+	width: 270px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #e6e6e6;
+}
+button[type="submit"]{
+	height: 40px;
+	width: 80px;
+	border-radius: 5px;
+	background-color: #333333;
+	color: white;
+}
+.twotbls{
+	border: 1px solid black;
+}
+.main-content{
+	border: 7px solid rgba(153, 153, 153, 0.1);
+	border-radius: 5px;
+	position: relative;
+	
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #e6e6e6;
+}
+div.side{
+	display: inline-block;
+	height: 70%;
+	/* border: 1px solid black; */
+	overflow-x: auto;
+	background-color: white;
+	
+}
+.tbl2{
+	width: 44.6%;
+	padding: 20px;
+		
+}
+
+
+table#t1, table#t2, td{
+border-collapse: collapse;
+padding: 10px;
+border-radius: 5px 0 0 5px;
+}
+
+table#t2 tr:nth-child(even){
+	background-color: #e6e6e6;
+}
+table#t2 tr:nth-child(odd){
+	background-color: white;
+}

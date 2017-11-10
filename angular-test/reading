@@ -1,0 +1,5 @@
+1. npm install -g grunt-cli bower yo generator-karma generator-angular
+
+run this if you dint find the plugin while running the test.
+
+npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev

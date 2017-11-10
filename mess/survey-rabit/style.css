@@ -1,0 +1,44 @@
+table, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+input[ng-model="radioCaption"],
+input[ng-model="radioOptions"],
+input[ng-model="checkCaption"],
+input[ng-model="checkOptions"]{
+	width: 380px;
+	height: 20px;
+	margin: 5px;
+}
+.rad{
+	padding: 10px;
+
+}
+.survey{
+	margin: 10px;
+}
+input[ng-model="title"]{
+	height: 20px;
+	width: 200px;
+}
+.inner{
+	width: 100%;
+}
+div.content{
+	
+	width: 30%;
+}
+div.options-content{
+	padding: 10px;
+}
+h2{
+	text-align: center;
+}
+td#sib{
+	height: 200%;
+}
+
+/* button.dbl{
+	border-style: double;
+	border-radius: 4px;
+} */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>AG-GRID example</title>	
+
+	</head>
+	<body ng-app="myApp">
+		
+		<div ng-controller="myCtrl as mc">
+            <button ng-click="mc.openDef()">get default</button>
+        </div>
+			
+	
+		<script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+		<script>
+            (function(){
+                angular.module('myApp', ['ngToast']);
+                angular.module('myApp')
+                        .controller('myCtrl', myCtrl);
+                myCtrl.$inject = ['ngToast'];
+
+                function myCtrl(ngToast){
+                    this.openDef = openDef;
+                    function openDef(){
+                        ngToast.open({
+                            template: '<div>Default open {{name}}</div>',
+                            controller: function($scope){
+                                $scope.name = 'mad';
+                            }
+                        })
+                    }
+                }        
+            })();
+        </script>	
+	</body>
+</html>

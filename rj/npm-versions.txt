@@ -1,0 +1,23 @@
+REFER http://gunnariauvinen.com/what-do-the-and-mean-in-package-json/
+
+~2.3.0 -> installs greater than 2.3.0 but less than 2.4.0 
+^2.3.0 -> installs greater than 2.3.0 (2.4.0, 2.3.1, 2.4.1, etc... first decimal is fixed, but the second and third
+can be latest, it will NOT INSTALL version 3.0.0 if available)
+* -> just star gives what ever the version is available greater than 0.0.0 will be installed
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

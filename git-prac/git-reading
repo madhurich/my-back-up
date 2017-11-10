@@ -1,0 +1,59 @@
+http://stackoverflow.com/questions/13239368/git-how-to-close-commit-editor
+
+to revert a commit,
+git revert <commit_number>
+
+you csn get the commit number by
+git log
+
+then identify which commit you want to revert.
+then you will get commit window
+press 'i' to write any message about your reverting commit
+then press 'esc' to escape from insert mode, then to SAVE and EXIT
+press ':x!' and hit 'enter' (:x! will take the cursor to the bottom, and hitting enter exits the commit window).
+
+now after all these, the old file can be seen in your local machine repository
+not in the remote repository, since you dint commit the reverted or old file after reverting the commit.
+
+So to see those changes in remote repository, 
+		> stage the file (git add .)
+		> commit the file (git commit -m "message")
+		> push the old file to see the reflected changes in remote repo (git push)
+		> now you cna see the changes in remote repo
+------------------------------------------
+
+Basic commands:
+clone   Clone a repository into a new directory 
+init    Create an empty Git repository or reinitialize an existing one work on the current change  
+config  Defines an author to the repositorylog     
+log     Show commit logs  
+status  Show the working tree status grow, mark and tweak your common history
+add     Add file contents to the index 
+diff Shows the difference between index and the working directory
+remote  Shows all the remote versions of our repository
+mv      Move or rename a file, a directory, or a symlink 
+reset   Reset current HEAD to the specified state 
+rm      Remove files from the working tree and from the index examine the history and state 
+revert  Undoes all the changes made in a repository
+clean   Cleans a file in the working directory
+bisect  Use binary search to find the commit that introduced a bug 
+grep    Print lines matching a pattern 
+log     Show commit logs 
+show    Show various types of objects 
+stash   Temporarily stores the changes that we don't want to commit immediately
+branch   List, create, or delete branches 
+checkout Switch branches or restore working tree files 
+commit   Record changes to the repository diff Show changes between commits, commit and working tree, etc merge Join two or more development histories together 
+rebase  Forward-port local commits to the updated upstream head 
+tag     Create, list, delete or verify a tag object signed with GPG collaborate 
+fetch   Download objects and refs from another repository 
+pull    Fetch from and integrate with another repository or a local branch 
+push    Update remote refs along with associated objects
+archive Creates a tar or zip file 
+gc      This is the garbage collector of the repository and optimizs the repository
+fsck    Identifies corrupted files
+prune   Removes the files that are no longer pointed to any branch that is reachable.
+cherry-pick Integrates the changes to the current branch
+blame   Shows who changed what line of code in the file		
+
+	

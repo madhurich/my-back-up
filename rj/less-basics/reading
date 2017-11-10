@@ -1,0 +1,7 @@
+install less globally
+> npm install -g less
+> create a file style.less and include style.css in index
+> now write code in style.less file and 
+compile it to css using
+	lessc style.less style.css
+> a style.css will be generated 	

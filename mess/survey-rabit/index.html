@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="surveyApp">
+	<div class="container" ng-controller="previewCtrl">
+		<table class="outer">
+		<tr>
+			<td>
+			<h4>Widgets</h4>
+			<input type="radio" ng-click="isChecked=true">Radio<br>
+			<input type="checkbox">Checkbox
+			</td>
+			<td id="sib">
+				<span class="survey">Survey Title:</span>
+				<input class="survey" type="text" ng-model="title">
+				<button class="survey dbl" ng-click="preview()">Preview</button>
+				<table class="inner">
+					<tr>
+						<td class="rad">
+						<input type="radio">Radio <span ng-click="remove()">x</span><br>
+						<input type="text" ng-model="radioCaption"><br>
+						<input type="text" ng-model="radioOptions">
+						</td>
+					</tr>
+					<tr>
+					<td class="rad">
+						<input type="checkbox">Checkbox<br>
+						<input type="text" ng-model="checkCaption"><br>
+						<input type="text" ng-model="checkOptions">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<div class="preview" ng-if="msg">
+	<div class="content">
+		<h2>{{surveyTitle}}</h2>
+		<div class="options-content">
+			<h3>{{radiocaption}}</h3>
+				<span ng-repeat="x in radiooptions">
+					<input type="radio">
+					{{x}}<br>
+				</span>
+			<h3>{{checkcaption}}</h3>
+				<span ng-repeat="x in checkoptions">
+					<input type="checkbox">
+					{{x}}<br>
+				</span>
+		</div>
+		
+		
+	</div>	
+	</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+		var app = angular.module('surveyApp', []);
+		app.controller('previewCtrl', ['$scope', function($scope){
+			$scope.isChecked = false;
+
+			$scope.preview = function(){
+				$scope.msg="previewd";
+				$scope.surveyTitle = $scope.title;
+				$scope.radiocaption = $scope.radioCaption;
+				$scope.radiooptions = $scope.radioOptions.split(',');
+				
+				$scope.checkcaption = $scope.checkCaption;
+				$scope.checkoptions = $scope.checkOptions.split(',');
+			};
+			
+			$scope.msg = "mad";
+		}]);
+
+
+	</script>
+</body>
+</html>

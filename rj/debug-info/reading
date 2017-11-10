@@ -1,0 +1,26 @@
+REFER file:///C:/Users/madhu/Desktop/rj/debug-info/index.html
+when ever a directove is created, and isolate scope is added to it,
+when angular compiles it, it adds a class called ng-isolate-scope
+and aslo we can use a method called 'isolateScope()' upon this element
+    check in console   
+        angular.element(document.querySelector('my-comp'))
+                .isolateScope(); //gives you an object.
+'my-comp'
+
+Ex:
+<my-comp class="ng-isolate-scope"></my-comp>
+
+this is actullay used in debugging purposes, but during production
+or deployment, this adds more load to the DOM since we dont use it
+in production, so we can disable this using a method called
+debugInfoEnabled(false) available in $compileProvider inside of the config
+function.
+
+This removes the class added by angular after compilation.
+
+check it in chrome console.
+But still if you want to have these clasess to check in production if any
+issue occurs, then in the chrome console, check 
+    angular.reloadWithDebugInfo()// then this again adds in the class to the element
+    'my-comp'.
+

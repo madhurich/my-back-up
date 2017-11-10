@@ -1,0 +1,31 @@
+ROUTING IN ANGULAR2
+To enable routing the three things we need to do are
+1. include the 'router' script in the index.html
+2. specify the <base href="/"> (this depends on from where you launch)
+3. import 'ROUTER_PROVIDERS' from 'angular2/router'
+4. specify this 'ROUTER_PROVIDERS' in the array after bootstraping
+bootstrap(AppComponent, [ROUTER_PROVIDERS]) in boot.ts file
+
+TO CONFIGURE ROUTES
+import {RouteConfig} from 'angular2/router';
+
+RouteConfig([
+	{path: '/albums', name: 'Albums', component: AlbumsComponent, useAsDefault: true},
+	{path: '/*other', name: 'Other', redirectTo: ['Albums']}
+
+])
+
+
+
+------IMPERATIVE ROUTING--------------
+to have imperative routing, i.e when we want to redirect to certian component,
+we cna do that using 'routerLink' as well but with imperative routing we can directly have acces to 
+router object. 
+
+to do imperative routing, from which component you want to redirect, in that component you need to do
+import {Router} from 'angular2/router';             
+
+---------------------
+Here I am adding a line in the new branch 'copy-git-repo'
+
+Brnaching here

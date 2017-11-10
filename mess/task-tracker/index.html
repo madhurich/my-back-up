@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Task tracker</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<div class="container main-content">
+		<div class="heading">
+			<h2>Task Tracker</h2>
+			
+		</div>
+		<div class="container tbl1 side">
+			<table id="t1" cellspacing="10">
+				<h3>Create a Task</h3>
+				<tr>
+					<td>Task Name<br><input type="text" name="taskName"></td>
+				</tr>
+				<tr>
+					<td>Date<br><input type="date"></td>
+				</tr>
+				<tr>
+					<td>Assigned To<br><input type="text" name="firstName"></td>
+				</tr>
+				<tr>
+					<td><button type="submit">Submit</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="container tbl2 side">
+			<table id="t2" class="test" cellspacing="10">
+				<h3>Existing Tasks</h3>
+				
+			</table>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="tasks.js"></script>
+	<script>
+
+		
+
+		$(document).ready(function(){
+		
+			var leftDiv = $('.tbl1').height();
+			$('.tbl2').css({'height': leftDiv});
+			
+			(function(){
+				console.log(data);
+					$.each(data, function(index, item){
+						
+							$('#t2').append("<tr><td><strong> " + item.name + "</strong> " + item.date +"</td><td><strong>" + item.assigned + "</strong></td>");
+						
+					});
+			})()
+				
+
+			$('button').click(function(){
+				var newTask = $('input[name="taskName"]').val();
+				/*console.log(newTask);*/
+				var newDate = $('input[type="date"]').val();
+				/*console.log(newDate);*/
+				var newPerson = $('input[name="firstName"]').val();
+				/*console.log(newPerson);*/
+
+				data.push({
+					name: newTask,
+					date: newDate,
+					assigned: newPerson
+				});
+
+				console.log(data);
+				var template = function(name, date, assigned){
+					return "<tr><td><strong>" + name + " </strong>" + date + "</td><td><strong>" + assigned +"</strong></td>";
+				};
+
+				var html = template(newTask, newDate, newPerson);
+				$('#t2').append(html);
+
+				$('input[name="taskName"]').val("");
+				$('input[type="date"]').val("");
+				$('input[name="firstName"]').val("");
+			
+			});
+			
+		});
+		/*$(document).ready(main);*/
+	</script>
+</body>
+</html>
